@@ -1,0 +1,17 @@
+:root { color-scheme: dark; font-family: Inter, system-ui, sans-serif; background: #061624; color: #e9f4fa; }
+* { box-sizing: border-box; }
+body { margin: 0; min-width: 320px; background: radial-gradient(circle at top, #123a55, #061624 55%); }
+main { width: min(1100px, 94vw); margin: 0 auto; padding: 3rem 0; text-align: center; }
+header { margin-bottom: 2.25rem; }
+.eyebrow { color: #61d2ed; font-size: .75rem; font-weight: 800; letter-spacing: .22em; margin: 0; }
+h1 { font-size: clamp(2.8rem, 9vw, 5.4rem); letter-spacing: .04em; line-height: 1; margin: .3rem 0 .75rem; text-transform: uppercase; }
+#status { min-height: 1.5rem; color: #bcd4df; } button { font: inherit; }
+#new-game { background: #f4b942; border: 0; border-radius: .4rem; color: #14202a; cursor: pointer; font-weight: 800; margin-top: .5rem; padding: .7rem 1rem; }
+.boards { display: flex; flex-wrap: wrap; gap: 2rem; justify-content: center; }
+.board-panel { width: min(100%, 440px); } h2 { font-size: 1.1rem; letter-spacing: .08em; text-transform: uppercase; }
+.board { aspect-ratio: 1; background: #0c2b40; border: 3px solid #61d2ed; display: grid; gap: 2px; grid-template-columns: repeat(10, 1fr); padding: 3px; }
+.cell { background: #145170; border: 0; min-width: 0; padding: 0; transition: background .15s, transform .15s; }
+.cell:not(:disabled):hover { background: #287fa3; cursor: crosshair; transform: scale(.93); }
+.cell.ship { background: #899ca8; }.cell.hit { background: #e55d55; }.cell.miss { background: #bee4ee; position: relative; }.cell.miss::after { background: #23627d; border-radius: 50%; content: ""; inset: 30%; position: absolute; }
+.legend { color: #bcd4df; display: flex; gap: .5rem; justify-content: center; align-items: center; margin-top: 2rem; }.legend span { display: inline-block; height: .85rem; width: .85rem; }.ship-key { background:#899ca8; }.hit-key { background:#e55d55; margin-left: .6rem; }.miss-key { background:#bee4ee; margin-left: .6rem; }
+@media (max-width: 600px) { main { padding-top: 2rem; } .boards { gap: 1rem; } }
