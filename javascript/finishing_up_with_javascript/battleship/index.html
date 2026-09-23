@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Battleship</title>
+    <link rel="stylesheet" href="./src/styles.css" />
+    <script type="module" src="./src/dom.js"></script>
+  </head>
+  <body>
+    <main>
+      <header>
+        <p class="eyebrow">NAVAL COMMAND</p>
+        <h1>Battleship</h1>
+        <p id="status" aria-live="polite">Your turn — select a square on the enemy board.</p>
+        <button id="new-game" type="button">New game</button>
+      </header>
+      <section class="boards" aria-label="Battleship boards">
+        <section class="board-panel">
+          <h2>Your fleet</h2><div id="player-board" class="board" aria-label="Your board"></div>
+        </section>
+        <section class="board-panel">
+          <h2>Enemy waters</h2><div id="computer-board" class="board" aria-label="Enemy board"></div>
+        </section>
+      </section>
+      <p class="legend"><span class="ship-key"></span> ship <span class="hit-key"></span> hit <span class="miss-key"></span> miss</p>
+    </main>
+  </body>
+</html>
